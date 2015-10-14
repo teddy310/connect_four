@@ -1,11 +1,22 @@
+var player1 = 0;
+var player2 = 0;
+
  var turn = 1;
-    function reset(){
+
+    function resetBoard(){
 
         $(".btns").removeClass('black-cell');
         $(".btns").removeClass('red-cell');
-
     }
-    $("#reset").click(reset);
+
+    function resetScore(){
+      $("#playerone").html("Player One");
+      $("#playertwo").html("Player Two");
+      player1 = 0;
+      player2 = 0;
+    }
+
+    $("#reset").click(resetBoard);
 
   $('.btns').click(function() {
 
@@ -341,8 +352,19 @@
           document.getElementById("39").getAttribute('class') == "btns red-cell"
 
         ){
-          alert("The Winner is Red!!!");
-          reset();
+
+          player1++;
+          $("#playerone").html("Player One " + player1);
+
+          if (player1 == 3){
+            alert("Player One has won the match!");
+            resetScore();
+          } else {
+            alert("The Winner is Red!!!");
+          }
+
+          resetBoard();
+
 
         } else if (
           // row 1
@@ -647,8 +669,18 @@
           document.getElementById("33").getAttribute('class') == "btns black-cell" &&
           document.getElementById("39").getAttribute('class') == "btns black-cell"
         ){
-          alert("The Winner is Black!!!");
-          reset();
+
+          player2++;
+          $("#playertwo").html("Player Two " + player2);
+
+          if (player2 == 3){
+            alert("Player Two has won the match!");
+            resetScore();
+          } else {
+            alert("The Winner is Black!!!");
+          }
+
+          resetBoard();
 
         }
       }
