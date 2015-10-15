@@ -3,28 +3,82 @@ var player2 = 0;
 
  var turn = 1;
 
+    $("#pages").click(function(){
+      $('#intro').hide("slow");
+      $('#everything').show("slow");
+
+    })
+
     function resetBoard(){
 
         $(".btns").removeClass('black-cell');
         $(".btns").removeClass('red-cell');
+        $(".btns").removeClass('green-cell');
     }
 
     function resetScore(){
-      $("#playerone").html("Player One");
-      $("#playertwo").html("Player Two");
+      $("#playerone").html("Score: 0");
+      $("#playertwo").html("Score: 0");
       player1 = 0;
       player2 = 0;
     }
 
+
+  function resetAll(){
+    $(".btns").removeClass('black-cell');
+    $(".btns").removeClass('red-cell');
+    $(".btns").removeClass('green-cell');
+    $("#playerone").html("Score: 0");
+    $("#playertwo").html("Score: 0");
+    player1 = 0;
+    player2 = 0;
+  }
+
     $("#reset").click(resetBoard);
+    $("#restart").click(resetAll);
 
   $('.btns').click(function() {
+
+    // if( turn === 1 ) {
+    //
+    //     if ($(this).hasClass("black-cell")){
+    //       $(this).toggleClass("green-cell")
+    //     }
+    //     else if ($(this).hasClass("green-cell")){
+    //       $(this).toggleClass("grey-cell")
+    //     }
+    //     else if ($(this).hasClass("red-cell")){
+    //       alert("Nice try dummy, you just waisted a turn!");
+    //     }
+    //     else{
+    //       $(this).toggleClass("red-cell");
+    //     } console.log( this );
+    //
+    //   turn = 2;
+    //   winner();
+    //
+    // } else {
+    //
+    //     if ($(this).hasClass("red-cell")){
+    //       $(this).toggleClass("green-cell")
+    //     }
+    //     else if ($(this).hasClass("green-cell")){
+    //       $(this).toggleClass("grey-cell")
+    //     }
+    //     else if ($(this).hasClass("black-cell")){
+    //       alert("Nice try dummy, you just waisted a turn!");
+    //     }
+    //     else{
+    //       $(this).toggleClass("black-cell");
+    //     } console.log( this );
+    // Can't get code to work for removing green dot class
+
 
       if( turn === 1 ) {
           if ($(this).hasClass("black-cell")){
             $(this).removeClass("black-cell")
           } else if ($(this).hasClass("red-cell")){
-            alert("Nice Try Dummy, you just waisted a turn!");
+            alert("Nice try dummy, you just waisted a turn!");
           } else{
             $(this).toggleClass("red-cell");
           } console.log( this );
@@ -36,7 +90,7 @@ var player2 = 0;
           if ($(this).hasClass("red-cell")){
             $(this).removeClass("red-cell")
           } else if ($(this).hasClass("black-cell")){
-            alert("Nice Try Dummy, you just waisted a turn!");
+            alert("Nice try dummy, you just waisted a turn!");
           } else{
             $(this).toggleClass("black-cell");
           } console.log( this );
@@ -354,13 +408,13 @@ var player2 = 0;
         ){
 
           player1++;
-          $("#playerone").html("Player One " + player1);
+          $("#playerone").html("Score: " + player1);
 
           if (player1 == 3){
-            alert("Player One has won the match!");
+            alert("Red has won the match!");
             resetScore();
           } else {
-            alert("The Winner is Red!!!");
+            alert("The winner is red!");
           }
 
           resetBoard();
@@ -671,13 +725,13 @@ var player2 = 0;
         ){
 
           player2++;
-          $("#playertwo").html("Player Two " + player2);
+          $("#playertwo").html("Score: " + player2);
 
           if (player2 == 3){
-            alert("Player Two has won the match!");
+            alert("Black has won the match!");
             resetScore();
           } else {
-            alert("The Winner is Black!!!");
+            alert("The winner is black!");
           }
 
           resetBoard();

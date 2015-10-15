@@ -3,11 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Quattro Locos!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 
   </head>
 
   <body>
+
+  <div class="hide" id="intro">
+    <button id="pages"> Play Quattros Locos </button>
+  </div>
+
+<div class="show" id="everything">
+    <div id="playerone"> Score: 0 </div>
+    <div id="playertwo"> Score: 0 </div>
 
       <div id="container">
         <div id="row1">
@@ -71,11 +80,11 @@
         </div>
     </div>
 
-      <button id="reset"> RESET </button>
+    <div id="fresh">
+      <button id="reset"> RESET BOARD </button> <button id="restart"> RESTART MATCH </button>
+    </div>
 
-      <div id="playerone"> player one </div>
-      <div id="playertwo"> player two </div>
-
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>

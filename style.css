@@ -1,6 +1,44 @@
+#intro {
+  display: block;
+  width: 1024px;
+  height: 778px;
+  padding-top: 10px;
+  margin: 0 auto;
+  background-image: url("http://s13.postimg.org/m63c6v4x3/quattros_locos.jpg");
+  background-repeat: no-repeat;
+}
+
+@-webkit-keyframes glowing {
+  0% { background-color: #0000FF; -webkit-box-shadow: 0 0 3px #0000FF; }
+  50% { background-color: #00FFFF; -webkit-box-shadow: 0 0 10px #00FFFF; }
+  100% { background-color: #00FF00; -webkit-box-shadow: 0 0 3px #00FF00; }
+}
+
+#pages {
+  width: 190px;
+  height: 50px;
+  border-radius: 150px;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 20px;
+  animation: glowing 1500ms infinite;
+  margin-top: 250px;
+  margin-left: 200px;
+}
+
+#everything {
+  width: 1070px;
+  height: 778px;
+  display: block;
+  padding-top: 10px;
+  margin: 0 auto;
+  display: none;
+}
 
 #container {
-  display: inline-block;
+  display: block;
   text-align: center;
   margin: 0 auto;
   border: black 3px solid;
@@ -8,8 +46,6 @@
   padding: 10px;
   width:750px;
   height: 635px;
-
-
 }
 
 .btns {
@@ -21,7 +57,7 @@ div.btns {
   display:inline-block;
   width:40px;
   height:40px;
-  border-radius:66px;
+  border-radius:200px;
   border:black 1px solid;
   font-size:20px;
   color:#666;
@@ -45,18 +81,79 @@ btns.hover{border:4px double #bbb;color:#aaa;text-decoration:none;background:#e6
    background: black!important; /* Or some other color */
 }
 
+.green-cell {
+   background: green!important;
+}
+
+.grey-cell {
+  background: #ddd!important;
+}
+
+#fresh {
+  display: block;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+
+}
+
+#reset {
+  width: 190px;
+  height: 50px;
+  border-radius: 150px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 20px;
+}
+
+#restart {
+  width: 190px;
+  height: 50px;
+  border-radius: 150px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.fa {
+  color: red;
+}
+
 #playerone {
   border: black 2px solid;
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   float: left;
+  border-radius: 200px;
+  background-color: #F00;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 100px;
+
 }
 
 #playertwo {
   border: black 2px solid;
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   float: right;
+  border-radius: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 100px;
 }
 
 #row1 {
