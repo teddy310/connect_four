@@ -4,7 +4,7 @@
   height: 778px;
   padding-top: 10px;
   margin: 0 auto;
-  background-image: url("http://s13.postimg.org/m63c6v4x3/quattros_locos.jpg");
+  background-image: url("http://s4.postimg.org/asv7d906l/cuatros_locos.jpg");
   background-repeat: no-repeat;
 }
 
@@ -37,6 +37,10 @@
   display: none;
   text-align: center;
   padding-bottom: 10px;
+}
+
+#p {
+  padding-bottom: 25px;
 }
 
 #container {
